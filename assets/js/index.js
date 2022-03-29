@@ -94,6 +94,12 @@ cam.addEventListener('play', async () => {
             new faceapi.draw.DrawTextField([
                 `${label} (${parseInt(distance * 100, 10)})`
             ], box.bottomRight).draw(canvas)
+            if (label === "Leonardo Aoki")
+                freeAccess()
         })
     }, 100)
 })
+
+function freeAccess() {
+    document.getElementById('access').innerHTML = "Liberado"
+}
